@@ -6,6 +6,44 @@
     --basic-menu-text:#fff;
     --basic-footer-menu-text:#FFD180;
 }
+.visual-hidden{
+    position: absolute !important;
+    clip: rect(1px,1px,1px,1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.container{
+    width: 940px;
+    margin: 0 auto;
+}
+.search-grid{
+    display: grid;
+    grid-template-columns: 300px 200px ;
+    
+}
+.logo-header{
+    background: var(--basic-button-red);
+    width: 220px;
+    height: 47px;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.skelet-end{
+    justify-self: end;
+}
+.logo-header a{
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.enter-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
 
 body {
     min-width: 960px;
@@ -42,6 +80,9 @@ ul{
     line-height: 23px;
     
 }
+.site-navigation{
+    margin: 0;
+}
 .enter .phone-number{
     color: #EE3643;
     font-weight: bold;
@@ -59,10 +100,21 @@ ul{
     line-height: 21px;
     
 }
+.features{
+    margin-bottom: 0;
+}
 .main-navigation{
     background-color: var(--basic-navigation-blue);
-    
-    
+}
+
+.features-list{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 123px 123px 123px ;
+    grid-gap: 20px;
+    padding-left: 0;
+    margin-top: 59px;
+    margin-bottom: 0;
 }
 .features-list .feature-item{
     width: 300px;
@@ -111,6 +163,7 @@ ul{
 }
 .features-list .green{
     background: #8ED78F;
+    grid-column: -2/-1;
 }
 
 .features-list .green a{
@@ -118,12 +171,15 @@ ul{
 }
 .features-list .last-yello{
     background: #FFC047;
+    grid-column: -2/-1;
+    grid-row: 3/4;
 }
 .features-list .last-yello a{
     background-color: #FFD37E;
 }
 .pop-price{
     background: #F9F5F0;
+    margin-top: 56px;
  }
 .pop-price h2{
     color: #32425C;
@@ -140,6 +196,13 @@ ul{
     line-height: 18px;
     text-transform: uppercase;
     background-color: #EE3643
+}
+.pop-price-list{
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 220px 220px 220px 220px;
+    grid-gap:20px;
+    margin-bottom: 0;
 }
 .pop-price-list .pop-item{
     background: #FFFFFF;
@@ -162,6 +225,9 @@ ul{
     font-weight: 700;
     line-height: 20px;
 }
+.firms-desk{
+    margin-top: 70px;
+}
 .firms-list .firms-desk{
     background: #F9F5F0;
 }
@@ -174,12 +240,17 @@ ul{
     text-transform: uppercase;
 }
 .firms-desk a{
-        font-style: normal;
+    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
     background-color: #EE3643
+}
+.firms-logo{
+    display: grid;
+    grid-template-columns: 220px 220px 220px 220px;
+    grid-template-rows: 145px 145px ;
 }
 .firms-logo div{
    /* width: 220px;
@@ -189,6 +260,9 @@ ul{
 .service-delivery{
     background: #F1F5F7;
     color: #000000;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
 }
 .service-delivery h3{
     text-transform: uppercase;
@@ -196,6 +270,9 @@ ul{
     line-height: 30px;
     font-style: normal;
     font-weight: normal;
+}
+.service{
+    grid-column: 1/4;
 }
 .service p{
     font-family: PT Sans;
@@ -229,6 +306,8 @@ ul{
 }
 .info{
     color: #000;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 .info h3{
     text-transform: uppercase;
@@ -270,11 +349,21 @@ ul{
     line-height: 24px;
     
 }
+.logo-footer{
+    display: grid;
+    grid-template-columns: 321px auto;
+    grid-template-rows: auto auto;
+}
 .footer-navigation-down{
     color: #FFD180;
 }
 .footer-social-contacts{
     background: var(--basic-dark-blue);
+ 
+}
+.footer-social-contacts .container{
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 .footer-social-contacts a{
     color: #FFD180;
@@ -351,3 +440,5 @@ ul{
     font-size: 13px;
     line-height: 24px;
 }
+
+@import url('grid-style.css');/*не работает иморт не могли бы показать как должен работать импорт ?*/

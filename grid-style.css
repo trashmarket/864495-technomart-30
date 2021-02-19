@@ -1,0 +1,6 @@
+.main-header{
+    background: black;
+    color: black;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
