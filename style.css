@@ -257,8 +257,11 @@ ul{
     height: 145px;*/
     border: 1px solid #EAEAEA;
 }
-.service-delivery{
+.service-delivery {
     background: #F1F5F7;
+}
+.service-delivery .container{
+    
     color: #000000;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -304,7 +307,7 @@ ul{
     background-color: #fff;
     color: #000;
 }
-.info{
+.info .container{
     color: #000;
     display: grid;
     grid-template-columns: auto auto;
@@ -406,6 +409,7 @@ ul{
     color: #000;
 }
 
+
 .pages a{
     color: #000;
 }
@@ -439,6 +443,16 @@ ul{
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
+}
+.catalog-grid{
+    display: grid;
+    grid-template-columns: 220px 700px;
+    gap: 20px;
+}
+.goods-grid{
+    display: grid;
+    grid-template-columns: 220px 220px 220px;
+    gap: 20px
 }
 
 @import url('grid-style.css');/*не работает иморт не могли бы показать как должен работать импорт ?*/
