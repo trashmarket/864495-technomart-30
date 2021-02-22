@@ -401,15 +401,24 @@ ul{
     color: #32425C;
     font-size: 30px;
     line-height: 30px;
+    grid-column: 1/3;
 }
 .catalog-goods{
     color: #000;
+    display: grid;
+    grid-template-columns: 220px 700px;
+    gap: 20px;
 }
 .filter-sort,.filter-sort a{
     color: #000;
 }
-
-
+.filter-sort{
+    grid-column: 1/4;
+    
+}
+.pages{
+    grid-column: 2/3;
+}
 .pages a{
     color: #000;
 }
@@ -444,11 +453,7 @@ ul{
     font-size: 13px;
     line-height: 24px;
 }
-.catalog-grid{
-    display: grid;
-    grid-template-columns: 220px 700px;
-    gap: 20px;
-}
+
 .goods-grid{
     display: grid;
     grid-template-columns: 220px 220px 220px;
