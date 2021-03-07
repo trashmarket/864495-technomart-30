@@ -9,29 +9,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="normalize.css">
 </head>
 
 <body>
     <header class="main-header">
         <section class="search">
             <div class="container search-flex">
-                <div class="skelet">
-                    <div class="logo-header">
-                        <a href="index.html">
+                <div class="logo-header">
+                    <a href="index.html">
                     Техномарт
-                        </a>
-                    </div>
-                    <form>
-                        <input type="text">
-                    </form>
+                    </a>
                 </div>
-            <div class="skelet-end">
+                <form>
+                    <input type="text">
+                </form>
             <ul>
                 <li>Закладки: 0</li>
                 <li>Корзина: 0</li>
             </ul>
             <a href="#">Оформить заказ</a>
-            </div>
             </div>
         </section>
         <section class="enter">
@@ -69,7 +66,7 @@
     </header>
     <main class="container-catalog ">
         <div class="container">
-        <nav>
+        <nav class="list-tools">
             <ul>
                 <li><a href="#"></a></li>
                 <li><a href="#">Каталог</a></li>
@@ -77,9 +74,9 @@
                 <li><a href="#">Перфораторы</a></li>
             </ul>
         </nav>
-        <section class="catalog-goods">
+    <section class="catalog-goods">
             <h2>ПЕРФОРАТОРЫ</h2>
-        
+        <section class="filters">
             <form name="filter-goods" class="filter-goods">
                 <h3>ФИЛЬТР:</h3>
                 <fieldset>
@@ -106,25 +103,26 @@
                 </fieldset>
                 <input type="submit" value="Показать">
             </form>
-            
-  
-                
-                    <ul class="pop-price-list goods-grid">
-                        <div class="filter-sort">
-                            <p>СОРТИРОВКА:</p>
-                            <ul>
-                                <li><a href="#">ПО ЦЕНЕ</a></li>
-                                <li><a href="#">ПО ТИПУ</a></li>
-                                <li><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
-                                <li><a href="#">фигура</a></li>
-                                <li><a href="#">фигура</a></li>
-                            </ul>
-                        </div>
+        </section>
+        <section class="catalog">
+                <div class="filter-sort">
+                    <p>СОРТИРОВКА:</p>
+                    <ul>
+                        <li><a href="#">ПО ЦЕНЕ</a></li>
+                        <li><a href="#">ПО ТИПУ</a></li>
+                        <li><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
+                        <li><a href="#">фигура</a></li>
+                        <li><a href="#">фигура</a></li>
+                    </ul>
+                </div>
+                <ul class="pop-price-list-catalog">
                         <li class="pop-item">
                             <img src="img/catalog/snippet-945 copy 2.jpg" width="148" height="128" alt=" Перфоратор">
-                            <a href="#">Перфоратор BOSCH BFG 6000</a>
-                            <p>30500 Р.</p>
-                            <a>25500 Р.</a>
+                                <div class="price-buttons">
+                                    <a href="#">Перфоратор BOSCH BFG 6000</a>
+                                    <p>30500 Р.</p>
+                                    <a>25500 Р.</a>
+                                </div>
                         </li>
                         <li class="pop-item">
                             <img src="img/catalog/snippet-945 copy 2.jpg" width="148" height="128" alt="">
@@ -175,7 +173,7 @@
                             <p>30500 Р</p>
                             <a>12500 Р.</a>
                         </li>
-                    </ul>
+                </ul>
                 <div class="pages">
                     <ul >
                         <li class="active-page"><a>1</a></li>
@@ -184,9 +182,7 @@
                     </ul>
                     <button>СЛЕДУЮЩАЯ</button>
                 </div>
-                
-            
-        
+            </section>
         </section>
     </div>
         <section class="info-goods">
