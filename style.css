@@ -322,7 +322,27 @@ ul{
 }
 .features-list .yello{
     background-color: #FFBF47;
-
+    overflow: hidden;
+}
+.features-list .yello::before{
+    content: "New";
+    text-transform: uppercase;
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    width: 95px;
+    height: 28px;
+    position: absolute;
+    top: 10px;
+    right: -25px;
+    transform: rotate(45deg);
+    background-color: var(--basic-button-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .features-list .yello::after{
     background-image: url("img/icon-1.png");
@@ -363,10 +383,24 @@ ul{
     height: 266px;
     background: url(img/Layer199.jpg);
 }
+.features-list .photo h2{
+    text-transform: uppercase;
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.features-list .photo p{
+    margin-top: 0;
+}
 .features-list .photo .left-roll{
     position: absolute;
     left: 24px;
     top: 122px;
+    cursor: pointer;
 }
 .features-list .photo .right-roll{
     position: absolute;
@@ -480,7 +514,28 @@ ul{
     height: 119px;
     text-align: center;
     margin-top: 29px;
-    margin-bottom: 38px;
+    margin-bottom: 28px;
+}
+.pop-price-list-index .pop-item:nth-child(2n)::before{
+    content: "New";
+    text-transform: uppercase;
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    width: 95px;
+    height: 28px;
+    position: absolute;
+    top: 10px;
+    right: -25px;
+    transform: rotate(45deg);
+    background-color: var(--basic-button-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .pop-price-list-catalog .pop-item, .pop-price-list-index .pop-item{
@@ -493,6 +548,8 @@ ul{
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 .pop-price-list-index .pop-item:nth-child(4n){
     margin-right: 0px;
@@ -512,11 +569,23 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    border-radius: 3px;
+}
+.pop-price-list-index .pop-item p:nth-of-type(2)::before, .pop-price-list-catalog .pop-item p:nth-of-type(2)::before{
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    border: 19px solid transparent;
+    border-left:19px solid var(--basic-button-red) ;
+    right: -25px;
+    top: 0;
 }
 .pop-price-list-catalog  p:nth-of-type(1), .pop-price-list-index p:nth-of-type(1){
     color: #A9A9A9;
     font-weight: 700;
     text-decoration: line-through;
+    margin: 7px 0 13px;
 }
 .pop-price-list-catalog  .pop-item a, .pop-price-list-index .pop-item a{
     color: #000;
@@ -565,7 +634,9 @@ ul{
     height: 522px;
     display: flex;
     align-items: center;
+    position: relative;
 }
+
 .service-delivery .service-flex{
     display: flex;
 }
@@ -616,14 +687,31 @@ ul{
     font-size: 21px;
     line-height: 30px;
     margin-right: 80px;
+    position: relative;
 }
-.service-delivery ul li:nth-child(1){
+.service-delivery ul::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 279px;
+    top: -45px;
+    right: 0;
+    background-image: url("img/column.png");
+    background-repeat: no-repeat;
+}
+.service-delivery ul li.active{
     background-color: #fff;
-    color: #000;
-    padding-left: 0;
+    color: #32425C;
+    border-bottom: none;
+    border-top: none;
 }
 .service-delivery ul li{
+    display: flex;
+    align-items: center;
+    padding-left: 22px;
     height: 61px;
+    border-bottom: 1px solid #293449;
+    border-top: 1px solid #405069;
 }
 .service-delivery img{
     width: 368px;
@@ -660,6 +748,18 @@ ul{
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 25px;
+}
+.info-desk ul li{
+    position: relative;
+}
+.info-desk ul li::before{
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: var(--basic-button-red);
+    position: absolute;
+    left: -35px;
+    bottom: 10px;
 }
 .info-desk a , .info-address a{
     background:var(--basic-button-red);
@@ -888,4 +988,13 @@ ul{
 .same-box a{
     display: inline-block;
     margin-top: 10px;
+}
+.vk{
+    background-image: url("img/vk.png");
+}
+.fc{
+    background-image: url("img/fc.png");
+}
+.inst{
+    background-image: url("img/inst.png");
 }
