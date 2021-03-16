@@ -30,6 +30,20 @@ img {
 .main-header .search{
     background-color: var(--basic-dark-blue);
 }
+.main-header .search form{
+    margin: 0;
+    position: relative;
+}
+.main-header .search form svg{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+.main-header .search form input{
+    height: 42px;
+    border: 0;
+    width: 271px;
+}
 ul{
     list-style: none
 }
@@ -81,7 +95,6 @@ ul{
     opacity: 0.3;
 }
 .search-magnifier:hover::before,
-.search-magnifier:active::before,
 .search-magnifier:focus::before{
     opacity: 1;
 }
@@ -109,8 +122,21 @@ ul{
 .search-flex ul .green{
     background-color: #63A63E;
 }
+.search-flex ul .green:hover{
+    background-color: #5FBB2D;
+}
+.search-flex ul .green:active a,
+.search-flex ul .green:active 
+{
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #63A63E;
+}
+
 .search-flex ul li{
     position: relative;
+}
+.search-flex ul li:not(.green):active{
+    background-color: #161D29;
 }
 .search-flex ul .basket::before{
     content: "";
@@ -139,10 +165,12 @@ ul{
 .search-flex ul li:hover::before{
     opacity: 1;
 }
-.search-flex ul li:active::before,
+.search-flex ul li:active::before{
+    opacity: 0.3;
+}
 .search-flex ul li:active
 {
-    opacity: 0.1;
+    
     color: rgba(255, 255, 255, 0.5);
 }
 .search-flex form{
@@ -167,6 +195,10 @@ ul{
     margin: 0;
     padding-top: 10px;
     margin-bottom: -5px;
+    font-size: 23px;
+}
+.logo-header:active{
+    background-color: #BA2732;
 }
 .skelet-phone-number a{
     text-align: center;
@@ -234,6 +266,12 @@ ul{
     line-height: 21px;
     color: #000;
 }
+.enter-buttons button:hover a{
+    color: var(--basic-button-red);
+}
+.enter-buttons button:active a{
+    color: #C5C5C5;
+}
  .login-link::before{
     content: "";
     position: absolute;
@@ -244,6 +282,12 @@ ul{
     background-image: url("img/icon-login.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
+}
+.enter-buttons .login-link:hover::before{
+    background-image: url("img/icon-login_active.svg");
+}
+.enter-buttons .login-link:active::before{
+    background-image: url("img/icon-login.svg");
 }
 .login-link{
     width: 121px;
@@ -278,9 +322,20 @@ ul{
 .main-navigation ul{
     display:flex;
     justify-content: space-around;
-    padding: 15px;
 }
-
+.main-navigation ul li:hover{
+    background-color: #293449;
+}
+.main-navigation ul li:active a{
+    opacity: 0.5;
+}
+.main-navigation ul li{
+    width: 122px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .features-list{
     display: grid;
     grid-template-columns: 300px 300px 300px;
@@ -319,6 +374,12 @@ ul{
     display: block;
     width: 135px;
     padding: 10px 0 10px 23px;
+}
+.features-list .feature-item a:hover{
+    background-color: #C5C5C5;
+}
+.features-list .feature-item a:active{
+    background-color: #A9A9A9;
 }
 .features-list .yello{
     background-color: #FFBF47;
@@ -383,6 +444,21 @@ ul{
     height: 266px;
     background: url(img/Layer199.jpg);
 }
+.features-list .photo .content .ball-left,
+.features-list .photo .content .ball-right{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+.features-list .photo .content .ball-left{
+    margin-left: 80px;
+}
+.back-ground-red{
+    background-color: var(--basic-button-red) !important;
+}
 .features-list .photo h2{
     text-transform: uppercase;
     font-family: Cuprum;
@@ -406,6 +482,7 @@ ul{
     position: absolute;
     right: 24px;
     top: 122px;
+    cursor: pointer;
 }
 .features-list .photo a{
     background-color: #EE3643;
@@ -413,6 +490,13 @@ ul{
     width: 192px;
     height: 38px;
     padding-left: 46px;
+    display: inline-block;
+}
+.features-list .photo a:hover{
+    background-color: #CA2C37;
+}
+.features-list .photo a:active{
+    background-color: #BA2732;
 }
 .features-list .green{
     background: #8ED78F;
@@ -629,6 +713,9 @@ ul{
     align-items: center;
     justify-content: center;
 }
+.firms-logo div:hover{
+    opacity: 0.5;
+}
 .service-delivery {
     background: #F1F5F7;
     height: 522px;
@@ -671,9 +758,21 @@ ul{
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
+    margin-bottom: 26px;
 }
 .delivery h3{
     color: #32425C;
+}
+.delivery button{
+    border: 0;
+    outline: none;
+    width: 195px;
+    height: 38px;
+    background-color: #FF5357;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
 }
 .service-delivery ul{
     width: 240px;
@@ -704,6 +803,9 @@ ul{
     color: #32425C;
     border-bottom: none;
     border-top: none;
+}
+.service-delivery ul li:hover:not(.active){
+    background-color: #293449;
 }
 .service-delivery ul li{
     display: flex;
@@ -810,6 +912,16 @@ ul{
     width: 553px;
     justify-content: space-between
 }
+.footer-navigation-up ul li:hover,
+.footer-navigation-down ul li:hover
+{
+    /*border-bottom: 2px solid #fff;*/
+    text-decoration: underline;
+}
+.footer-navigation-up ul li:active,
+.footer-navigation-down ul li:active{
+    opacity: 0.5;
+}
 .footer-navigation-down ul{
     display: flex;
     width: 524px;
@@ -853,6 +965,11 @@ ul{
     background-color: #212A3A;
     width: 44px;
     height: 44px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.social-media div:hover{
+    background-color: var(--basic-button-red);
 }
 .footer-call-back{
     display: flex;
@@ -867,6 +984,12 @@ ul{
 }
 .footer-social-contacts a{
     color: #FFD180;
+}
+.footer-social-contacts a:hover{
+    text-decoration: underline;
+}
+.footer-social-contacts a:active{
+    color: var(--basic-button-red);
 }
 .footer-info{
     margin-bottom: 54px;
