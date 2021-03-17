@@ -258,7 +258,7 @@ ul{
     background-color: #fff;
     position: relative;
 }
-.enter-buttons button a{
+.enter-buttons button span{
     font-family: Cuprum;
     font-style: normal;
     font-weight: normal;
@@ -266,10 +266,10 @@ ul{
     line-height: 21px;
     color: #000;
 }
-.enter-buttons button:hover a{
+.enter-buttons button:hover span{
     color: var(--basic-button-red);
 }
-.enter-buttons button:active a{
+.enter-buttons button:active span{
     color: #C5C5C5;
 }
  .login-link::before{

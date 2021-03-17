@@ -47,10 +47,10 @@
                     
                     <div class="enter-buttons">
                         <button class="login-link">
-                            <a>Войти</a>
+                            <span>Войти</span>
                         </button>
                         <button class="reg">
-                            <a>Регистрация</a>
+                            <span>Регистрация</span>
                         </button>
                     </div>
         </section>
@@ -85,8 +85,8 @@
                     <a href="#">для стройки</a>
                 </li>
                 <li class="feature-item photo">
-                    <span class="left-roll" style="display: none;"><img src="img/icon-left.png" width="22" height="40" alt=""></span>
-                    <span class="right-roll" style="display:block"><img src="img/icon-right.png" width="22" height="40" alt=""></span>
+                    <span class="left-roll"><img src="img/icon-left.png" width="22" height="40" alt=""></span>
+                    <span class="right-roll"><img src="img/icon-right.png" width="22" height="40" alt=""></span>
                     <div class="content">
                         <h2>Перфораторы</h2>
                         <p>Настоящие мужские игрушки</p>
@@ -269,16 +269,12 @@
         let leftRoll = document.querySelector('.left-roll');
         document.querySelector('.photo').addEventListener("click", event => {
             if(event.target.closest('.right-roll')){
-                leftRoll .style.display="block";
                 event.currentTarget.style.background = "url('img/Layer 99.jpg')";
-                rightRoll.style.display="none";
                 event.currentTarget.querySelector('.content').innerHTML = "<h2>дрели</h2><p>Соседям на радость</p><a href='#'>ОТКРЫТЬ КАТАЛОГ</a> <span class='ball-left back-ground-red'></span> <span class='ball-right'></span>";
             }
             if(event.target.closest('.left-roll')){
                 event.currentTarget.querySelector('.content').innerHTML = "<h2>Перфораторы</h2><p>Настоящие мужские игрушки</p><a href='#'>ОТКРЫТЬ КАТАЛОГ</a> <span class='ball-left'></span> <span class='ball-right back-ground-red'></span>";
-                rightRoll.style.display="block";
                 event.currentTarget.style.background = "url('img/Layer199.jpg')";
-                leftRoll.style.display="none";
             }
         })
 
