@@ -39,8 +39,29 @@
                 if(event.currentTarget.querySelector('.active')){event.currentTarget.querySelector('.active').classList.remove("active");}
                 event.target.classList.add("active");
                 event.currentTarget.querySelector(".container").style.backgroundImage = "url('img/credit.png')";
-                event.currentTarget.querySelector(".service-flex .delivery").innerHTML = "<h3>Кредит</h3><p>Залезть в долговую яму стало проще! <br> Кредитные консультанты придут вам на помощь.</p> <button>ОТПРАВИТЬ ЗАЯВКУ</button>"
+                let credit = event.currentTarget.querySelector(".service-flex .delivery");
+                credit.innerHTML = "<h3>Кредит</h3><p>Залезть в долговую яму стало проще! <br> Кредитные консультанты придут вам на помощь.</p> <button class='active-modal'>ОТПРАВИТЬ ЗАЯВКУ</button>";
+                credit.querySelector('.active-modal').onclick = function(){
+                   let modalCredit = document.createElement('section');
+                    modalCredit.className = 'modal-message';
+                    modalCredit.innerHTML = `<form action="" class="pop-up" name="pop-up">
+                    <fieldset class="informtion">
+                        <p><label for="name">Ваше имя:</label><input type="text" name="name" id="name" placeholder="Имя Фамилия"></p>
+                        <p><label for="mail">Ваше имя:</label><input type="text" name="mail" id="mail" placeholder="email@example.com"></p>
+                        <label for="text">Текст письма:</label><textarea name="text" id="text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+                    </fieldset>
+                    <fieldset class="submit">
+                        <input type="submit" value="отправить">
+                    </fieldset>
+                    </form>
+                    <button class="modal-close" aria-label="Закрыть"></button>`;
+                    document.body.append(modalCredit);
+                    modalCredit.querySelector(".modal-close").onclick = () =>{
+                        modalCredit.remove();
+                    }
+                }
             }
+
             if(event.target.closest('.delivery-button')){
                 if(event.currentTarget.querySelector('.active')){event.currentTarget.querySelector('.active').classList.remove("active");}
                 event.target.classList.add("active");
@@ -48,3 +69,4 @@
                 event.currentTarget.querySelector(".service-flex .delivery").innerHTML = "<h3>Доставка</h3><p>Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж!</p>";
             }
         });
+ 
