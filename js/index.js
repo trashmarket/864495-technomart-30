@@ -42,23 +42,12 @@
                 let credit = event.currentTarget.querySelector(".service-flex .delivery");
                 credit.innerHTML = "<h3>Кредит</h3><p>Залезть в долговую яму стало проще! <br> Кредитные консультанты придут вам на помощь.</p> <button class='active-modal'>ОТПРАВИТЬ ЗАЯВКУ</button>";
                 credit.querySelector('.active-modal').onclick = function(){
-                   let modalCredit = document.createElement('section');
-                    modalCredit.className = 'modal-message';
-                    modalCredit.innerHTML = `<form action="" class="pop-up" name="pop-up">
-                    <fieldset class="informtion">
-                        <p><label for="name">Ваше имя:</label><input type="text" name="name" id="name" placeholder="Имя Фамилия"></p>
-                        <p><label for="mail">Ваше имя:</label><input type="text" name="mail" id="mail" placeholder="email@example.com"></p>
-                        <label for="text">Текст письма:</label><textarea name="text" id="text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-                    </fieldset>
-                    <fieldset class="submit">
-                        <input type="submit" value="отправить">
-                    </fieldset>
-                    </form>
-                    <button class="modal-close" aria-label="Закрыть"></button>`;
-                    document.body.append(modalCredit);
-                    modalCredit.querySelector(".modal-close").onclick = () =>{
-                        modalCredit.remove();
+                    let modal = document.querySelector('.modal-message');
+                    modal.style.display = 'block';
+                    modal.querySelector('.modal-close').onclick = () => {
+                        modal.style.display = 'none';
                     }
+
                 }
             }
 

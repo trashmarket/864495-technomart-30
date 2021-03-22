@@ -295,12 +295,6 @@ ul{
     background-image: url(img/icon-user.svg);
     left: 20px;
 }
-.enter-login .login-name:active::before{
-    background-image: url(img/icon-user.svg) !important;
-}
-.enter-login .login-name:active::after{
-    background-image: url(img/icon-login.svg) !important;
-}
 .enter-login .login-name:hover::before{
     content: "";
     width: 17px;
@@ -317,11 +311,14 @@ ul{
     background-image: url(img/icon-login_active.svg);
     right: 25px;
 }
-.enter-login .hrefs:active a{
-    color: #C5C5C5 !important;
+.enter-login .login-name:active::before{
+    background-image: url(img/icon-user.svg) ;
 }
-.enter-login .hrefs:active a:nth-child(1)::after{
-    background-color: #C5C5C5 !important;
+.enter-login .login-name:active::after{
+    background-image: url(img/icon-login.svg) ;
+}
+.enter-login .login-name:active {
+    color: #C5C5C5;
 }
 .enter-login a:not(login-name){
     color:#32425C;
@@ -331,6 +328,9 @@ ul{
 .enter-login .hrefs:hover a
 {
     color: var(--basic-button-red);
+}
+.enter-login .hrefs:active a{
+    color: #C5C5C5 ;
 }
 .enter-login .hrefs a:nth-child(1){
     margin-left: 50px;
@@ -347,7 +347,10 @@ ul{
     left: 133px;
 }
  .hrefs:hover a:nth-child(1)::after{
-    background: var(--basic-button-red) !important;
+    background: var(--basic-button-red) ;
+}
+ .hrefs:active a:nth-child(1)::after{
+    background-color: #C5C5C5 ;
 }
 .enter-login .login-name::after{
     content: "";
@@ -1151,16 +1154,16 @@ ul{
     width: 460px;
     height: 38px;
 }
-.modal-message form .informtion input,
-.modal-message form .informtion textarea
+.modal-message .informtion input,
+.modal-message .informtion textarea
 {
     border: 2px solid #C5C5C5;
     border-radius: 2px; 
     padding-left: 11px;
     color:#C5C5C5;
 }
-.modal-message form .informtion input::placeholder,
-.modal-message form .informtion textarea::placeholder
+.modal-message input::placeholder,
+.modal-message textarea::placeholder
 {
     color: #C5C5C5;
     font-weight: normal;
@@ -1168,7 +1171,7 @@ ul{
     font-family: PT Sans;
     font-style: normal;
 }
-.modal-message form .informtion textarea{
+.modal-message textarea{
     padding-top: 11px;
 }
 .modal-close{
@@ -1199,14 +1202,14 @@ ul{
 .modal-close::after {
     transform: rotate(-45deg);
   }
-.modal-message form .informtion{
+.modal-message .informtion{
     margin: 0 auto;
     width: 460px;
 }
 .modal-message fieldset{
     border: none;
 }
-.modal-message form .submit{
+.modal-message .submit{
     height: 112px;
     padding: 0;
     margin: 0;
@@ -1409,7 +1412,7 @@ ul{
     height:193px;
     
 }
-.footer-navigation-down{
+.footer-navigation-down a{
     color: #FFD180;
     height: 53px;
     margin-top: 0;
