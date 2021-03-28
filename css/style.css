@@ -69,7 +69,7 @@ ul{
 /*.search-grid{
     display: grid;
     grid-template-columns: 300px 200px ;
-    
+
 }*/
 
 .search-flex{
@@ -110,7 +110,7 @@ ul{
     justify-content: space-between;
     margin-top: 0;
     margin-left: auto;
-    
+
 }
 .search-flex  ul li {
     width: 150px;
@@ -126,7 +126,7 @@ ul{
     background-color: #5FBB2D;
 }
 .search-flex ul .green:active a,
-.search-flex ul .green:active 
+.search-flex ul .green:active
 {
     color: rgba(255, 255, 255, 0.5);
     background-color: #63A63E;
@@ -170,7 +170,7 @@ ul{
 }
 .search-flex ul li:active
 {
-    
+
     color: rgba(255, 255, 255, 0.5);
 }
 .search-flex form{
@@ -226,8 +226,8 @@ ul{
     color: #EE3643;
     font-size: 16px;
     line-height: 23px;
-    
-}  
+
+}
 .skelet-phone-number{
     color: #32425C;
     font-size: 14px;
@@ -619,7 +619,7 @@ ul{
     background: #FFC047;
     grid-column: -2/-1;
     grid-row: 3/4;
-    
+
 }
 .features-list .last-yello::after{
     background-image: url("../img/icon-5.png");
@@ -704,7 +704,7 @@ ul{
 .range-controls .toggle-min {
     left: 18px;
   }
-  
+
   .range-controls .toggle-max {
     left: 140px;
   }
@@ -721,7 +721,7 @@ ul{
     height: 38px;
     background-color: #F7F3EC;
     font-size: 13px;
-    line-height: 18px; 
+    line-height: 18px;
     display: flex;
     align-items: center;
     padding-left: 17px;
@@ -998,7 +998,7 @@ ul{
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
-    
+
 }
 .firms-logo{
     display: grid;
@@ -1122,7 +1122,7 @@ ul{
 .service-delivery img{
     width: 368px;
     height: 261px;
-    
+
 }
 .info {
     color: #000;
@@ -1158,7 +1158,7 @@ ul{
 .modal-message .informtion textarea
 {
     border: 2px solid #C5C5C5;
-    border-radius: 2px; 
+    border-radius: 2px;
     padding-left: 11px;
     color:#C5C5C5;
 }
@@ -1198,7 +1198,7 @@ ul{
 .modal-close::before {
     transform: rotate(45deg);
   }
-  
+
 .modal-close::after {
     transform: rotate(-45deg);
   }
@@ -1345,7 +1345,7 @@ ul{
     height: 38px;
     display: inline-block;
     text-align: center;
-    
+
 }
 .info-address a{
     display: inline-block;
@@ -1397,14 +1397,14 @@ ul{
     display: flex;
     width: 524px;
     justify-content: space-between;
-    
+
 }
 .logo-footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     height:193px;
-    
+
 }
 .footer-navigation-down a{
     color: #FFD180;
@@ -1414,7 +1414,7 @@ ul{
 
 .footer-social-contacts{
     background: var(--basic-dark-blue);
- 
+
 }
 .social-media{
     display: flex;
@@ -1522,7 +1522,7 @@ ul{
     border-bottom: 1px dotted var(--basic-button-red);
 }
 .filter-sort ul li a:hover{
-    
+
     border-bottom: 1px solid var(--basic-button-red);
 }
 .filter-sort ul li a:active{
@@ -1613,11 +1613,7 @@ ul{
     line-height: 24px;
 }
 
-/*.goods-grid{
-    display: grid;
-    grid-template-columns: 220px 220px 220px;
-    gap: 20px
-}*/
+
 .same-box{
     display: flex;
     justify-content: space-between;
